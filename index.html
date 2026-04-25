@@ -1,95 +1,198 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cappri Rossi — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Asset/Css/style.css">
+</head>
+<body>
 
-  <body>
-    
-    <header>
-      <nav>
-        <h2 class="logo">Porto<span>folio</span></h2>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
 
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#skill">Skill</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="logo">Porto<span>folio</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
-    <section id="home" class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>Halo, Saya</h1>
-          <h2>Cappri Rossi</h2>
-          <p>Web Developer | UI Designer</p>
-          <a href="#contact" class="btn">Hubungi Saya</a>
-        </div>
+  <div class="mobile-nav">
+    <button class="close-btn" onclick="document.querySelector('.mobile-nav').classList.remove('open')">✕</button>
+    <a href="#home" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Home</a>
+    <a href="#about" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Tentang</a>
+    <a href="#skill" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Skill</a>
+    <a href="#project" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Project</a>
+    <a href="#contact" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Kontak</a>
+  </div>
 
-        <div class="hero-img">
-          <img src="MyPhoto.jpeg" alt="Foto Profil" />
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <h2>Tentang Saya</h2>
-
-      <p>
-        Saya adalah seorang developer yang tertarik pada pengembangan website,
-        aplikasi mobile, dan UI design. Saya suka membuat aplikasi modern
-        menggunakan teknologi terbaru.
-      </p>
-    </section>
-
-    <section id="skill" class="skill">
-      <h2>Skill</h2>
-
-      <div class="skill-container">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">Flutter</div>
-        <div class="card">PHP</div>
-      </div>
-    </section>
-
-    <section id="project" class="project">
-      <h2>Project</h2>
-
-      <div class="project-container">
-        <div class="project-card">
-          <h3>Website Antrian Online</h3>
-          <p>Sistem antrian berbasis web menggunakan PHP & MySQL.</p>
-        </div>
-
-        <div class="project-card">
-          <h3>Aplikasi Rental PlayStation</h3>
-          <p>Aplikasi Flutter untuk manajemen rental PS.</p>
-        </div>
-
-        <div class="project-card">
-          <h3>Game Flappy Hero</h3>
-          <p>Game sederhana mirip Flappy Bird menggunakan Delphi.</p>
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Tersedia untuk proyek baru</div>
+        <h1>Halo, Saya<br><span class="name">Cappri Rossi</span></h1>
+        <p class="tagline">Web Developer &amp; UI Designer — membangun pengalaman digital yang modern.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Hubungi Saya →</a>
+          <a href="#project" class="btn-ghost">Lihat Project</a>
         </div>
       </div>
-    </section>
+      <div class="hero-photo-wrap">
+        <img src="Asset/Img/MyPhoto.jpeg" alt="Foto Cappri Rossi" />
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-      <h2>Kontak</h2>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Tentang Saya</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">Saya developer yang<br>suka membangun hal baru.</h2>
+        <p>Saya seorang developer yang tertarik pada pengembangan website, aplikasi mobile, dan UI design. Saya suka membuat aplikasi modern menggunakan teknologi terbaru dengan fokus pada pengalaman pengguna yang intuitif dan estetika yang menarik.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card fade-up">
+          <div class="num">3+</div>
+          <div class="label">Tahun belajar</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="num">5</div>
+          <div class="label">Teknologi</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="num">3</div>
+          <div class="label">Project selesai</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="num">∞</div>
+          <div class="label">Semangat belajar</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>Email : capprirossi16@gmail.com</p>
-      <p>Instagram : @xcpri___</p>
-    </section>
+  <!-- SKILLS -->
+  <section id="skill">
+    <div class="section-label">Keahlian</div>
+    <h2 class="section-title">Skill & Teknologi</h2>
+    <div class="skills-grid">
+      <div class="skill-card fade-up">
+        <span class="skill-icon">🌐</span>
+        <div class="name">HTML</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+      </div>
+      <div class="skill-card fade-up">
+        <span class="skill-icon">🎨</span>
+        <div class="name">CSS</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-card fade-up">
+        <span class="skill-icon">⚡</span>
+        <div class="name">JavaScript</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div>
+      </div>
+      <div class="skill-card fade-up">
+        <span class="skill-icon">📱</span>
+        <div class="name">Flutter</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:70%"></div></div>
+      </div>
+      <div class="skill-card fade-up">
+        <span class="skill-icon">🐘</span>
+        <div class="name">PHP</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:65%"></div></div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <p>© 2026 Portofolio Saya</p>
-    </footer>
-  </body>
+  <!-- PROJECTS -->
+  <section id="project">
+    <div class="section-label">Portofolio</div>
+    <h2 class="section-title">Project Saya</h2>
+    <div class="projects-grid">
+      <div class="project-card fade-up">
+        <div class="project-num">01</div>
+        <h3>Website Antrian Online</h3>
+        <p>Sistem antrian berbasis web untuk memudahkan manajemen antrean secara real-time tanpa perlu hadir secara fisik.</p>
+        <div class="project-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Web App</span>
+        </div>
+      </div>
+      <div class="project-card fade-up">
+        <div class="project-num">02</div>
+        <h3>Aplikasi Rental PlayStation</h3>
+        <p>Aplikasi mobile untuk manajemen rental PS — pencatatan sesi, pembayaran, dan laporan harian secara otomatis.</p>
+        <div class="project-tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Mobile</span>
+        </div>
+      </div>
+      <div class="project-card fade-up">
+        <div class="project-num">03</div>
+        <h3>Game Flappy Hero</h3>
+        <p>Game arcade sederhana terinspirasi dari Flappy Bird dengan karakter hero yang unik, dibangun dari nol menggunakan Delphi.</p>
+        <div class="project-tags">
+          <span class="tag">Delphi</span>
+          <span class="tag">Game Dev</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Kontak</div>
+    <div class="contact-inner">
+      <div>
+        <h2 class="section-title">Mari berkolaborasi bersama.</h2>
+        <p class="contact-desc">Punya ide proyek atau ingin bekerja sama? Jangan ragu untuk menghubungi saya. Saya selalu terbuka untuk peluang baru yang menarik.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:capprirossi16@gmail.com" class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <div class="contact-type">Email</div>
+            <div class="contact-val">capprirossi16@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/xcpri___" target="_blank" class="contact-item">
+          <div class="contact-icon">📸</div>
+          <div class="contact-info">
+            <div class="contact-type">Instagram</div>
+            <div class="contact-val">@xcpri___</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Porto<span>folio</span></div>
+    <p>© 2026 Cappri Rossi. Dibuat dengan ❤️</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
